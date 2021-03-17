@@ -3,15 +3,6 @@ from sklearn.cluster import KMeans
 from PIL import Image
 import numpy as np
 
-X = np.array([[0,0,0], [1,1,1], [3,2,2], [0, 1, 1], [1, 3, 1], [2, 3, 1],
-              [3,3,1], [2,2,2], [1,0,1], [3,2,1]])
-
-starting_cen = np.array([[0,0,0], [1,1,1]])
-kmeans = KMeans(n_clusters=2, random_state=0, init=starting_cen).fit(X)
-
-for i in range(0,len(X)):
-    print(X[i],kmeans.labels_[i])
-
 def process_image(image_prefix_name, filetype, min, max):
     for i in range(min, max + 1):
 
